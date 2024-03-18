@@ -1,0 +1,26 @@
+<div class="language-buttons">
+  <button (click)="switchToFr()" *ngIf="frFlag" id="fr"></button>
+  <button (click)="switchToEn()" *ngIf="enFlag" id="en"></button>
+  <button (click)="switchToRo()" *ngIf="roFlag" id="ro"></button>
+  <button (click)="switchToEs()" *ngIf="esFlag" id="es"></button>
+</div>
+
+<div class="top-container">
+  <div class="title-container">
+    <h1>{{ "SiteTitle" | translate }}</h1>
+  </div> 
+  <div class="buttons">
+    <button class="app-button" routerLink="/menu">
+      {{"Start" | translate}}
+    </button>
+  </div>
+</div>
+
+<div class="description-container">
+  <p class="description">
+    {{ "AppDescription" | translate }} <br />
+    {{ "AppDescription2" | translate }}
+  </p>
+</div>
+
+

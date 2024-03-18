@@ -1,0 +1,37 @@
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import "_colors";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;}
+
+.gm-style .gm-style-iw-c {
+  background-color: $main-color;
+}
+
+.gm-style .gm-style-iw-tc::after {
+  background: $main-color;
+}
+
+.gm-style-iw-d::-webkit-scrollbar {
+  display: none !important;
+}
+
+.gm-style .transit-container .transit-title,
+.gm-style .transit-container div,
+.poi-info-window div,
+.poi-info-window a,
+.gm-style .transit-div-line-name .renderable-component-bold {
+  background-color: $main-color;
+  color: $stroke-color;
+}
+
+.dialog .mat-mdc-dialog-container .mdc-dialog__surface {
+  background-color: $main-color !important;
+  border-radius: 16px;
+}

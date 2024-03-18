@@ -1,0 +1,58 @@
+<button (click)="goBack()" class="back-button">
+  <ion-icon name="arrow-back-outline"></ion-icon>
+</button>
+
+
+<div class="wrapper">
+
+  <div class="menu-description-container">
+    <p class="menu-description">
+      {{ "Menu1" | translate }} <br />
+      {{ "Menu2" | translate }}
+    </p>
+  </div>
+
+  <button
+  class="app-button"
+  routerLink="/map"
+  [queryParams]="{ query: 'tourist' }"
+  >{{ "Option1" | translate }}</button
+>
+
+  <button
+    class="app-button"
+    routerLink="/map"
+    [queryParams]="{ query: 'museum,theater' }"
+    >{{ "Option2" | translate }}</button
+  >
+  <button
+    class="app-button"
+    routerLink="/map"
+    [queryParams]="{ query: 'park,monument' }"
+    >{{ "Option3" | translate }}</button
+  >
+  <button
+    class="app-button"
+    routerLink="/map"
+    [queryParams]="{ query: 'church,cathedral' }"
+    >{{ "Option4" | translate }}</button
+  >
+  <button
+    class="app-button"
+    routerLink="/map"
+    [queryParams]="{ query: 'library,university' }"
+    >{{ "Option5" | translate }}</button
+  >
+  <button
+    class="app-button"
+    routerLink="/map"
+    [queryParams]="{ query: 'restaurant,cafe' }"
+    >{{ "Option6" | translate }}</button
+  >
+  <button
+    class="app-button"
+    routerLink="/map"
+    [queryParams]="{ query: 'hotel' }"
+    >{{ "Option7" | translate }}</button
+  >
+</div>

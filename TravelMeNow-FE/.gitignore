@@ -7,10 +7,10 @@
 /bazel-out
 
 # Certificates
-.pem
-.crt 
-.key
-.pfx
+*.pem
+*.crt 
+*.key
+*.pfx
 
 # Node
 /node_modules

@@ -1,0 +1,57 @@
+{
+    "SiteTitle": "Travel Me Now",
+    "AppDescription": "Application de réalité augmentée pour",
+    "AppDescription2": "découvrir le paysage urbain de Paris.",
+    "Option1": "TOP ATTRACTIONS",
+    "Option2": "MUSÉES ET THÉÂTRES",
+    "Option3": "PARCS ET MONUMENTS",
+    "Option4": "ÉGLISES ET CATHÉDRALES",
+    "Option5": "BIBLIOTHÈQUES ET UNIVERSITÉS",
+    "Option6": "RESTAURANTS & CAFÉS",
+    "Option7": "HÔTELS",
+    "Visit": "Visiter",
+    "Rating": "Évaluation",
+    "Open": "Ouvert maintenant",
+    "Yes": "Oui",
+    "No": "Non",
+    "Distance": "Distance",
+    "Minutes": "minutes",
+    "Street": "Rue",
+    "City": "Ville",
+    "Country": "Pays",
+    "Start": "Commencer",
+    "Menu1": "Choisissez le",
+    "Menu2": "site touristique souhaité :",
+    "landmark_details": {
+        "NotreDame": {
+          "name": "Cathédrale Notre Dame",
+          "details": "La cathédrale Notre-Dame de Paris, joyau culturel, est réputée pour son architecture gothique époustouflante et son importance historique. Il constitue un symbole emblématique du patrimoine français. Dévastée par un incendie en 2019, Notre-Dame reste un témoignage résilient de l'art et de l'histoire. La réouverture de la cathédrale Notre-Dame de Paris est annoncée pour le 8 décembre 2024.",
+          "opening_hours": "Du lundi au samedi 8 décembre: 08:00 - 18:15; Dimanche 08:30 - 18:30",
+          "data.link": "https://www.notredamedeparis.fr/"
+        },
+        "EiffelTower": {
+          "name": "Tour Eiffel",
+          "details": "La Tour Eiffel, située à Paris, en France, est un symbole emblématique de la ville et du pays. Conçue par Gustave Eiffel, la tour est en fer et se compose de trois niveaux offrant une vue panoramique sur Paris. Des millions de visiteurs du monde entier montent chaque année sur la Tour Eiffel, ce qui en fait l'un des monuments payants les plus visités au monde. La nuit, la Tour Eiffel est illuminée par des milliers de lumières scintillantes, créant un spectacle de lumière éblouissant qui dure plusieurs minutes toutes les heures, renforçant ainsi son attrait.",
+          "opening_hours": "Tous les jours 09:30 - 23:45",
+          "data.link": "https://www.toureiffel.paris/"
+        },
+        "LouvreMuseum": {
+          "name": "Musée du Louvre",
+          "details": "Le musée du Louvre est le plus grand musée d'art et d'antiquités au monde. Il est situé dans le centre de Paris, sur la rive droite de la Seine. Le musée est une destination incontournable pour les amateurs d'art et d'histoire. Il abrite des milliers d'œuvres d'art, dont la célèbre Joconde de Léonard de Vinci.",
+          "opening_hours": "Lundi, jeudi, samedi, dimanche 09:00 - 18:00; Mercredi, vendredi 09:00 - 21:45",
+          "data.link": "https://www.louvre.fr/"
+        },
+        "MuseedOrsay": {
+          "name": "Musée d'Orsay",
+          "details": "Le musée d'Orsay est un musée d'art situé à Paris, en France. Il est situé dans une ancienne gare ferroviaire, la gare d'Orsay, qui a été transformée en musée en 1986. Le musée abrite une collection d'œuvres d'art impressionnistes et post-impressionnistes, dont des peintures, des sculptures, des photographies et des objets d'art.",
+          "opening_hours": "Mardi, mercredi, vendredi, samedi, dimanche 09:30 - 18:00; Jeudi 09:30 - 21:45",
+          "data.link": "https://www.musee-orsay.fr/"
+        },
+        "ArcDeTriomphe": {
+            "name": "L'Arc de Triomphe",
+            "details": "L'Arc de Triomphe est un monument emblématique de Paris, situé sur la place de l'Étoile, à l'extrémité ouest de l'avenue des Champs-Élysées. Il a été construit pour commémorer les victoires militaires de Napoléon Bonaparte. L'Arc de Triomphe est un symbole de la grandeur et de la gloire de la France.",
+            "opening_hours": "Tous les jours 10:00 - 23:00",
+            "data.link": "https://paris-arc-de-triomphe.fr/"
+        }
+    }
+}

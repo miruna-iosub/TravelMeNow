@@ -1,0 +1,28 @@
+<div class="webcam-container">
+  <webcam [height]="560" [width]="400" [trigger]="triggerObservable" (imageCapture)="recognizeImg($event)"></webcam>
+  <button class="takepic" (click)="getSnapshot()">Capture Image</button>
+  <button class="bookmark-button" [ngClass]="{'bookmarked': isBookmarked}" (click)="toggleBookmark()">
+    <ion-icon name="bookmarks-outline"></ion-icon>
+  </button>
+
+  <!-- Overlay Information on Webcam Feed -->
+  <div *ngIf="buildingInfo" class="info-overlay">
+    <h2>{{ buildingInfo.name }}</h2>
+    <p *ngFor="let detail of buildingInfo.details">{{ detail }}</p>
+    <div [innerHTML]="buildingInfo.opening_hours"></div>
+    <a [href]="buildingInfo.link" target="_blank">Learn more</a>
+  </div>
+</div>
+
+<div class="bookmarks-container">
+  <h3>Bookmarks</h3>
+  <button (click)="clearBookmarks()">Clear Bookmarks</button>
+  <ul>
+    <li *ngFor="let bookmark of bookmarks">
+      <h4>{{ bookmark.name }}</h4>
+      <p *ngFor="let detail of bookmark.details">{{ detail }}</p>
+      <p>Opening Hours: <span [innerHTML]="bookmark.opening_hours"></span></p>
+      <a [href]="bookmark.link" target="_blank">Learn more</a>
+    </li>
+  </ul>
+</div>
