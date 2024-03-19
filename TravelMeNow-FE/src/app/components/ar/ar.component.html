@@ -1,8 +1,24 @@
 <div class="webcam-container">
   <webcam [height]="560" [width]="400" [trigger]="triggerObservable" (imageCapture)="recognizeImg($event)"></webcam>
-  <button class="takepic" (click)="getSnapshot()">Capture Image</button>
+
+  <button (click)="goBack()" class="back-button">
+    <ion-icon name="arrow-back-outline"></ion-icon>
+  </button>
+
+  <button class="clear-bookmark" (click)="clearBookmarks()">
+    <ion-icon name="trash"></ion-icon>
+  </button>
+
+  <button class="list-button" routerLink="/bookmarks">
+    <ion-icon name="list"></ion-icon>
+  </button>
+
+  <button class="take-pic" (click)="getSnapshot()">
+    <ion-icon class="camera-icon" name="camera"></ion-icon>
+  </button>
+
   <button class="bookmark-button" [ngClass]="{'bookmarked': isBookmarked}" (click)="toggleBookmark()">
-    <ion-icon name="bookmarks-outline"></ion-icon>
+    <ion-icon [name]="isBookmarked ? 'bookmarks' : 'bookmarks-outline'"></ion-icon>
   </button>
 
   <!-- Overlay Information on Webcam Feed -->
@@ -12,17 +28,4 @@
     <div [innerHTML]="buildingInfo.opening_hours"></div>
     <a [href]="buildingInfo.link" target="_blank">Learn more</a>
   </div>
-</div>
-
-<div class="bookmarks-container">
-  <h3>Bookmarks</h3>
-  <button (click)="clearBookmarks()">Clear Bookmarks</button>
-  <ul>
-    <li *ngFor="let bookmark of bookmarks">
-      <h4>{{ bookmark.name }}</h4>
-      <p *ngFor="let detail of bookmark.details">{{ detail }}</p>
-      <p>Opening Hours: <span [innerHTML]="bookmark.opening_hours"></span></p>
-      <a [href]="bookmark.link" target="_blank">Learn more</a>
-    </li>
-  </ul>
 </div>

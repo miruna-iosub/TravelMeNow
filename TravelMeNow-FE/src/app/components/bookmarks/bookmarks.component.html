@@ -1,0 +1,12 @@
+
+<div class="bookmarks-container">
+    <h3 >Bookmarks</h3>
+    <ul>
+      <li *ngFor="let bookmark of bookmarks">
+        <h4>{{ bookmark.name }}</h4>
+        <p *ngFor="let detail of bookmark.details">{{ detail }}</p>
+        <p>Opening Hours: <span [innerHTML]="bookmark.opening_hours"></span></p>
+        <a [href]="bookmark.link" target="_blank">Learn more</a>
+      </li>
+    </ul>
+  </div>

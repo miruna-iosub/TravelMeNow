@@ -15,6 +15,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ImageWebcamComponent } from './components/ar/ar.component';
 import { WebcamModule } from 'ngx-webcam';
+import { BookmarksComponent } from './components/bookmarks/bookmarks.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { WebcamModule } from 'ngx-webcam';
     MenuComponent,
     MapComponent,
     GoogleMapsComponent,
-    ImageWebcamComponent
+    ImageWebcamComponent,
+    BookmarksComponent
   ],
   imports: [
     BrowserModule,

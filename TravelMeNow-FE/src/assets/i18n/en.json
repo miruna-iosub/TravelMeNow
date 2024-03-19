@@ -1,5 +1,5 @@
 {
-    "SiteTitle": "Travel Me Now",
+    "SiteTitle": "TravelMeNow",
     "AppDescription": "AR app crafted to",
     "AppDescription2": "explore the vibrant cityscape of Paris.",
     "Option1": "TOP ATTRACTIONS",
@@ -26,31 +26,31 @@
           "name": "Notre Dame Cathedral",
           "details": "Notre-Dame Cathedral in Paris, a cultural gem, is renowned for its stunning Gothic architecture and historical significance. It stands as an iconic symbol of French heritage. Devastated by a fire in 2019, Notre-Dame remains a resilient testament to art and history. The reopening of Notre-Dame Cathedral in Paris is announced for the 8th December 2024.",
           "opening_hours": "Every day 09:30 - 23:45",
-          "data.link": "https://www.notredamedeparis.fr/"
+          "link": "https://www.notredamedeparis.fr/"
         },
         "EiffelTower": {
           "name": "Tour Eiffel",
           "details": "The Eiffel Tower, located in Paris, France, is an iconic symbol of both the city and the country. Designed by Gustave Eiffel, the tower is made of iron and consists of three levels that offer panoramic views of Paris. Millions of visitors from around the world annually ascend the Eiffel Tower, making it one of the most visited paid monuments globally. At night, the Eiffel Tower is illuminated by thousands of sparkling lights, creating a dazzling light show that lasts for several minutes every hour, enhancing its allure.",
           "opening_hours": "Tous les jours 09:30 - 23:45",
-          "data.link": "https://www.toureiffel.paris/"
+          "link": "https://www.toureiffel.paris/"
         },
         "LouvreMuseum": {
           "name": "Musée du Louvre",
           "details": "The Louvre in Paris, a famed art museum, hosts the iconic Mona Lisa and a vast collection spanning centuries. A global cultural landmark, it draws millions yearly with its artistic treasures. Home to historical masterpieces, the Louvre stands as a symbol of rich cultural heritage. It has a vast collection of art and historical artifacts.",
           "opening_hours": "Monday, Thursday, Saturday, Sunday 09:00 - 18:00; Wednesday, Friday 09:00 - 21:45",
-          "data.link": "https://www.louvre.fr/"
+          "link": "https://www.louvre.fr/"
         },
         "MuseeOrsay": {
           "name": "Musée d'Orsay",
           "details": "The Musée d'Orsay (English: Orsay Museum) is a museum in Paris, France, on the Left Bank of the Seine. The museum building was originally a railway station, Gare d'Orsay, located next to the Seine river. Built on the site of the Palais d'Orsay, its central location was convenient for commuting travelers. The station was constructed for the Chemin de Fer de Paris à Orléans and finished in time for the 1900 Exposition Universelle to the design of three architects: Lucien Magne, Émile Bénard and Victor Laloux. The Gare d'Orsay design was considered to be an 'anachronism'.",
           "opening_hours": "Tuesday, Wednesday, Friday, Saturday, Sunday 09:30 - 18:00; Thursday 09:30 - 21:45",
-          "data.link": "https://www.musee-orsay.fr/"
+          "link": "https://www.musee-orsay.fr/"
         },
         "ArcDeTriomphe": {
             "name": "Arc de Triomphe",
             "details": "The Arc de Triomphe is an iconic triumphal arch located at the western end of the Champs-Élysées in Paris, France. Commissioned by Napoleon Bonaparte in 1806 after his victory at Austerlitz, it was completed in 1836 under the reign of King Louis-Philippe. The arch stands as a symbol of French national pride and commemorates the soldiers who fought and died for France in the French Revolutionary and Napoleonic Wars. Standing at 50 meters tall, the Arc de Triomphe offers stunning views of the city from its terrace and is a focal point for national celebrations and ceremonies.",
             "opening_hours": "Every day 10:00 - 23:00",
-            "data.link": "https://paris-arc-de-triomphe.fr/"
+            "link": "https://paris-arc-de-triomphe.fr/"
         }
     }
 }

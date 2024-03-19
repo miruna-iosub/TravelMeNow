@@ -3,6 +3,7 @@ import { Observable, Subject } from 'rxjs';
 import { WebcamImage, WebcamInitError, WebcamUtil } from 'ngx-webcam';
 import { ImageService } from './services/image.service';
 import { TranslateService } from '@ngx-translate/core';
+import { Location } from '@angular/common';
 
 interface BuildingInfo {
   name: string;
@@ -27,7 +28,8 @@ interface BuildingInfo {
 export class ImageWebcamComponent {
   constructor(
     private imageService: ImageService,
-    private _translate: TranslateService
+    private _translate: TranslateService,
+    private location: Location
   ) { }
 
   public bookmarks: BuildingInfo[] = [];
@@ -66,7 +68,7 @@ export class ImageWebcamComponent {
           this.buildingInfo = {
             name: translations.name,
             details: [translations.details],
-            link: data.link,
+            link: translations.link,
             opening_hours: translations.opening_hours
           };
         });
@@ -77,6 +79,9 @@ export class ImageWebcamComponent {
     );
   }
 
+  goBack() {
+    this.location.back();
+  }
 
   public get invokeObservable(): Observable<any> {
     return this.trigger.asObservable();

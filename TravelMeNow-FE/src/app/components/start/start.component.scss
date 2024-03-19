@@ -37,22 +37,27 @@
   flex-direction: column;
   gap: 0.5rem;
 }
-
-.app-button,
-.custom-start-button {
-  font-size: 16px;
-  margin-top: 14rem;
-  color: $secondary-color;
-  margin-left: 1.9rem;
-}
-
 .app-button {
   width: 11.5rem;
   height: 2.5rem;
   background-color: $start-button-color;
   border: 1px solid $border-start-button-color;
   border-radius: 30px;
+  font-size: 16px;
+  color: $secondary-color;
+  margin-top: 14rem;
+  margin-left: auto; /* Added to center the button */
+  margin-right: auto; /* Added to center the button */
 }
+
+.custom-start-button {
+  font-size: 16px;
+  margin-top: 14rem;
+  margin-left: auto; /* Added to center the button */
+  margin-right: auto; /* Added to center the button */
+  color: $secondary-color;
+}
+
 
 .custom-start-button {
   font-size: 12px;

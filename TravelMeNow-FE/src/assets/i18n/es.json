@@ -1,5 +1,5 @@
 {
-    "SiteTitle": "Travel Me Now",
+    "SiteTitle": "TravelMeNow",
     "AppDescription": "Aplicación AR diseñada para",
     "AppDescription2": "explorar el vibrante paisaje urbano de París.",
     "Option1": "ATRACCIONES PRINCIPALES",
@@ -26,31 +26,31 @@
           "name": "Catedral de Notre Dame",
           "details": "La catedral de Notre-Dame de París, una joya cultural, es famosa por su impresionante arquitectura gótica y su importancia histórica. Constituye un símbolo emblemático del patrimonio francés. Devastada por un incendio en 2019, Notre-Dame sigue siendo un testimonio resistente del arte y la historia. La reapertura de la catedral de Notre-Dame de París está anunciada para el 8 de diciembre de 2024.",
           "opening_hours": "Lunes a sábado 8 de diciembre: 08:00 - 18:15; Domingo 08:30 - 18:30",
-          "data.link": "https://www.notredamedeparis.fr/"
+          "link": "https://www.notredamedeparis.fr/"
         },
         "EiffelTower": {
           "name": "La Torre Eiffel",
           "details": "La Torre Eiffel, ubicada en París, Francia, es un símbolo icónico de la ciudad y del país. Diseñada por Gustave Eiffel, la torre está hecha de hierro y consta de tres niveles que ofrecen una vista panorámica de París. Millones de visitantes de todo el mundo suben a la Torre Eiffel cada año, lo que la convierte en uno de los monumentos de pago más visitados del mundo. Por la noche, la Torre Eiffel se ilumina con miles de luces parpadeantes, creando un espectáculo de luces deslumbrante que dura varios minutos cada hora, realzando su atractivo.",
           "opening_hours": "Todos los días 09:30 - 23:45",
-          "data.link": "https://www.toureiffel.paris/"
+          "link": "https://www.toureiffel.paris/"
         },
         "LouvreMuseum": {
           "name": "El Museo del Louvre",
           "details": "El Museo del Louvre es el museo de arte y antigüedades más grande del mundo. Está situado en el centro de París, en la margen derecha del Sena. El museo es un destino de visita obligada para los amantes del arte y la historia. Alberga miles de obras de arte, incluida la famosa Mona Lisa de Leonardo da Vinci.",
           "opening_hours": "Lunes, jueves, sábado y domingo de 09:00 a 18:00 horas; Miércoles, viernes 09:00 - 21:45",
-          "data.link": "https://www.louvre.fr/"
+          "link": "https://www.louvre.fr/"
         },
         "MuseedOrsay": {
           "name": "Musée d'Orsay",
           "details": "El Musée d'Orsay es un museo de arte ubicado en París, Francia. Está ubicado en una antigua estación de tren, Gare d'Orsay, que se convirtió en museo en 1986. El museo alberga una colección de obras de arte impresionistas y postimpresionistas, que incluyen pinturas, esculturas, fotografías y objetos de arte.",
           "opening_hours": "Martes, miércoles, viernes, sábado y domingo de 09:30 a 18:00; Jueves 09:30 - 21:45",
-          "data.link": "https://www.musee-orsay.fr/"
+          "link": "https://www.musee-orsay.fr/"
         },
         "ArcDeTriomphe": {
             "name": "El Arco de Triunfo",
             "details": "El Arco de Triunfo es un monumento emblemático de París, ubicado en la Place de l'Étoile, en el extremo occidental de la Avenue des Champs-Élysées. Fue construido para conmemorar las victorias militares de Napoleón Bonaparte. El Arco de Triunfo es un símbolo de la grandeza y la gloria de Francia.",
             "opening_hours": "Todos los días de 10:00 a 23:00",
-            "data.link": "https://paris-arc-de-triomphe.fr/"
+            "link": "https://paris-arc-de-triomphe.fr/"
         }
     }
 }

@@ -1,5 +1,5 @@
 {
-    "SiteTitle": "Travel Me Now",
+    "SiteTitle": "TravelMeNow",
     "AppDescription": "Aplicație AR creată pentru",
     "AppDescription2": "a explora peisajul urban vibrant al Parisului.",
     "Option1": "ATRACȚII PRINCIPALE",
@@ -26,31 +26,31 @@
           "name": "Catedrala Notre Dame",
           "details": "Catedrala Notre-Dame de Paris, o bijuterie culturală, este renumită pentru arhitectura sa gotică uimitoare și semnificația istorică. Constituie un simbol emblematic al moștenirii franceze. Devastată de un incendiu în 2019, Notre-Dame rămâne o mărturie rezistentă a artei și istoriei. Redeschiderea Catedralei Notre-Dame de Paris este anunțată pentru 8 decembrie 2024.",
           "opening_hours": "De luni până sâmbătă 8 decembrie: 08:00 - 18:15; Duminică 08:30 - 18:30",
-          "data.link": "https://www.notredamedeparis.fr/"
+          "link": "https://www.notredamedeparis.fr/"
         },
         "EiffelTower": {
           "name": "Turnul Eiffel",
           "details": "Turnul Eiffel, situat în Paris, Franța, este un simbol emblematic al orașului și al țării. Proiectat de Gustave Eiffel, turnul este din fier și este format din trei niveluri, oferind o vedere panoramică asupra Parisului. Milioane de vizitatori din întreaga lume urcă pe Turnul Eiffel în fiecare an, făcându-l unul dintre cele mai vizitate monumente plătite din lume. Noaptea, Turnul Eiffel este iluminat de mii de lumini sclipitoare, creând un spectacol de lumini orbitor care durează câteva minute în fiecare oră, sporindu-i atractivitatea.",
           "opening_hours": "În fiecare zi 09:30 - 23:45",
-          "data.link": "https://www.toureiffel.paris/"
+          "link": "https://www.toureiffel.paris/"
         },
         "LouvreMuseum": {
           "name": "Muzeul Luvru",
           "details": "Muzeul Luvru este cel mai mare muzeu de artă și antichități din lume. Este situat în centrul Parisului, pe malul drept al Senei. Muzeul este o destinație de vizitat obligatoriu pentru iubitorii de artă și istorie. Adăpostește mii de opere de artă, inclusiv celebra Mona Lisa de Leonardo da Vinci.",
           "opening_hours": "Luni, Joi, Sâmbătă, Duminică 09:00 - 18:00; Miercuri, vineri 09:00 - 21:45",
-          "data.link": "https://www.louvre.fr/"
+          "link": "https://www.louvre.fr/"
         },
         "MuseedOrsay": {
           "name": "Muzeul d'Orsay",
           "details": "Muzeul d'Orsay este un muzeu de artă situat în Paris, Franța. Este situat într-o fostă gară, Gare d'Orsay, care a fost transformată în muzeu în 1986. Muzeul găzduiește o colecție de lucrări de artă impresioniste și postimpresioniste, inclusiv picturi, sculpturi, fotografii și obiecte de artă.",
           "opening_hours": "Marți, Miercuri, Vineri, Sâmbătă, Duminică 09:30 - 18:00; joi 09:30 - 21:45",
-          "data.link": "https://www.musee-orsay.fr/"
+          "link": "https://www.musee-orsay.fr/"
         },
         "ArcDeTriomphe": {
             "name": "Arcul de Triumf",
             "details": "Arcul de Triumf este un monument emblematic al Parisului, situat pe Place de l'Étoile, la capătul vestic al Avenue des Champs-Élysées. A fost construit pentru a comemora victoriile militare ale lui Napoleon Bonaparte. Arcul de Triumf este un simbol al măreției și gloriei Franței.",
             "opening_hours": "În fiecare zi 10:00 - 23:00",
-            "data.link": "https://paris-arc-de-triomphe.fr/"
+            "link": "https://paris-arc-de-triomphe.fr/"
         }
     }
 }

@@ -5,12 +5,15 @@ import { MenuComponent } from './components/menu/menu.component';
 import { MapComponent } from './components/map/map.component';
 import { CommonModule } from '@angular/common';
 import { ImageWebcamComponent } from './components/ar/ar.component';
+import { BookmarksComponent } from './components/bookmarks/bookmarks.component';
+
 
 const routes: Routes = [
   {path: 'home', component: StartComponent},
   {path: 'menu', component: MenuComponent},
   {path: 'map', component: MapComponent},
   {path: 'ar', component: ImageWebcamComponent},
+  {path: 'bookmarks', component: BookmarksComponent},
   {path: '', redirectTo: '/home', pathMatch: 'full'}
 ]
 
