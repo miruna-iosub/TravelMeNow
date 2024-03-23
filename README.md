@@ -1,4 +1,4 @@
-# ✈️ 📸 TravelMeNow (AR Experience for Discovering Paris)
+# ✈️ 📸 TravelMeNow (Augmented Reality Journey through Paris)
 
 TravelMeNow is an augmented reality app designed to transform the way you explore and experience the city of Paris. By simply pointing your device at Parisian landmarks, you get to uncover rich histories, and future memories - all through the lens of your smartphone. ✨
 
