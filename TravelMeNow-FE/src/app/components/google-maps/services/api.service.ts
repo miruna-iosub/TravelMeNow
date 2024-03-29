@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, map } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { AddressDTO, DistanceDTO, PointOfInterestDTO } from 'src/app/model';
+import { GoogleLocationDTO, GapDTO, LandmarkDTO } from 'src/app/model';
 
 @Injectable({
   providedIn: 'root',
@@ -19,45 +19,45 @@ export class ApiService {
     long: number,
     query: string,
     radius: number = 30000 
-  ): Observable<PointOfInterestDTO[]> {
+  ): Observable<LandmarkDTO[]> {
     return this._httpClient
       .get(
-        `${this.url}/places?latitude=${lat}&longitude=${long}&query=${query}&radius=${radius}`
+        `${this.url}/spots?lat=${lat}&long=${long}&query=${query}&radius=${radius}`
       )
       .pipe(
-        map<any, PointOfInterestDTO[]>((response) => {
+        map<any, LandmarkDTO[]>((response) => {
           return response;
         })
       );
   }
 
-  getDistanceBetweenPlaces(
-    originLatitude: number,
-    originLongitude: number,
-    destinationLatitude: number,
-    destinationLongitude: number
-  ): Observable<DistanceDTO> {
-    const url = `${this.url}/distance?OriginLatitude=${originLatitude}&OriginLongitude=${originLongitude}&DestLatitude=${destinationLatitude}&DestLongitude=${destinationLongitude}`;
+  getGapBetweenSpots(
+    originLat: number,
+    originLong: number,
+    destinationLat: number,
+    destinationLong: number
+  ): Observable<GapDTO> {
+    const url = `${this.url}/gap?OriginLat=${originLat}&OriginLong=${originLong}&DestLat=${destinationLat}&DestLong=${destinationLong}`;
 
     return this._httpClient
       .get(url)
       .pipe(
-        map<any, DistanceDTO>((response) => {
+        map<any, GapDTO>((response) => {
           return response;
         })
       );
   }
 
-  getAddressByCoordinates(
-    latitude: number,
-    longitude: number
-  ): Observable<AddressDTO> {
-    const url = `${this.url}/address?Latitude=${latitude}&Longitude=${longitude}`;
+  getGoogleLocationByCoordinates(
+    lat: number,
+    long: number
+  ): Observable<GoogleLocationDTO> {
+    const url = `${this.url}/googlelocation?Lat=${lat}&Long=${long}`;
 
     return this._httpClient
       .get(url)
       .pipe(
-        map<any, AddressDTO>((response) => {
+        map<any, GoogleLocationDTO>((response) => {
           return response;
         })
       );

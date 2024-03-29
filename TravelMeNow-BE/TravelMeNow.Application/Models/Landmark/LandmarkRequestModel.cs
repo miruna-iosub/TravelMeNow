@@ -2,7 +2,7 @@
 
 public class LandmarkRequestModel
 {
-    public string Name { get; set; }
+    public string LandmarkName { get; set; }
 
     public string Info { get; set; }
 }

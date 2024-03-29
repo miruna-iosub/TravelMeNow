@@ -1,7 +1,7 @@
 ﻿
 using TravelMeNow.Application.Mapping;
 using TravelMeNow.Application.Services;
-using TravelMeNow.Application.Services.Impl;
+using TravelMeNow.Application.Services.Implementation;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 

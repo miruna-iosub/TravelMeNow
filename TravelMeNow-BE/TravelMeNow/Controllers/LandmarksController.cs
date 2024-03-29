@@ -8,7 +8,7 @@ namespace TravelMeNow.API.Controllers;
 [Route("[controller]")]
 public class LandmarksController : ControllerBase
 {
-    private readonly ILandmarkService _landmarkService;
+    private ILandmarkService _landmarkService;
 
     public LandmarksController(ILandmarkService landmarkService)
     {

@@ -3,12 +3,12 @@ using TravelMeNow.Application.Models.Landmark;
 using TravelMeNow.DataAccess.Entities;
 using TravelMeNow.DataAccess.Repositories;
 
-namespace TravelMeNow.Application.Services.Impl;
+namespace TravelMeNow.Application.Services.Implementation;
 
 public class LandmarkService : ILandmarkService
 {
-    private readonly ILandmarkRepository _landmarkRepository;
-    private readonly IMapper _mapper;
+    private  ILandmarkRepository _landmarkRepository;
+    private IMapper _mapper;
 
     public LandmarkService(ILandmarkRepository landmarkRepository, IMapper mapper)
     {

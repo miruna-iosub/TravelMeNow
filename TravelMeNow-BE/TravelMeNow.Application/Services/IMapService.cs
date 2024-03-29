@@ -1,15 +1,14 @@
-﻿using TravelMeNow.Application.Models.Address;
-using TravelMeNow.Application.Models.Place;
-using TravelMeNow.Application.Models.PlacesDistance;
+﻿using TravelMeNow.Application.Models.GoogleLocation;
+using TravelMeNow.Application.Models.Spot;
+using TravelMeNow.Application.Models.SpotsGap;
 
 namespace TravelMeNow.Application.Services;
 
 public interface IMapService
 {
-    Task<IEnumerable<PlaceResponseModel>> GetPlacesAsync(PlaceRequestModel placeRequestModel);
+    Task<IEnumerable<SpotResponseModel>> GetSpotsAsync(SpotRequestModel spotRequestModel);
 
-    Task<InfoResponseModel> GetDistanceFromUserLocationAsync(DistanceRequestModel distanceRequestModel);
+    Task<InfoResponseModel> GetGapFromUserLocationAsync(GapRequestModel gapRequestModel);
 
-    Task<AddressResponseModel> GetAddressByLongitudinalCoordinatesAsync(AddressRequestModel addressRequestModel);
-
+    Task<GoogleLocationResponseModel> GetGoogleLocationByLongitudinalCoordinatesAsync(GoogleLocationRequestModel googleLocationRequestModel);
 }

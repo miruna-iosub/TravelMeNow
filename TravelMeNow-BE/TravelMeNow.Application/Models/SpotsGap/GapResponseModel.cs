@@ -1,9 +1,9 @@
 ﻿using Newtonsoft.Json;
 
-namespace TravelMeNow.Application.Models.PlacesDistance;
+namespace TravelMeNow.Application.Models.SpotsGap;
 
 [Serializable]
-public class DistanceResponseModel
+public class GapResponseModel
 {
     [JsonProperty("elements")]
     public IEnumerable<InfoResponseModel>? Infos { get; set; }

@@ -1,4 +1,4 @@
-export interface PointOfInterest {
+export interface Landmark {
   position: {
     lat: number;
     lng: number;
@@ -8,7 +8,7 @@ export interface PointOfInterest {
   open_now: boolean;
 }
 
-export interface PointOfInterestDTO {
+export interface LandmarkDTO {
   geometry: {
     location: {
       lat: number;
@@ -24,8 +24,8 @@ export interface PointOfInterestDTO {
   };
 }
 
-export interface DistanceDTO {
-  distance: {
+export interface GapDTO {
+  gap: {
     text: string;
   };
   duration: {
@@ -33,16 +33,15 @@ export interface DistanceDTO {
   };
 }
 
-export interface Distance {
-  kmNumber: string;
+export interface Gap {
   eta: string;
 }
 
-export interface AddressDTO {
-  formatted_address: string;
+export interface GoogleLocationDTO {
+  formattedGoogleLocation: string;
 }
 
-export interface Address {
+export interface GoogleLocation {
   street: string;
   city: string;
   country: string;
@@ -75,6 +74,5 @@ export interface MarkerInfo {
   lat: number;
   lng: number;
   open: string | undefined;
-  distance: string;
   eta: string;
 }

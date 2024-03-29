@@ -9,7 +9,7 @@ import { GoogleMap, MapInfoWindow } from '@angular/google-maps';
 import { ActivatedRoute } from '@angular/router';
 import { openGoogleMaps } from './utils';
 import { TranslateService } from '@ngx-translate/core';
-import { Address, Marker, MarkerInfo } from 'src/app/model';
+import { GoogleLocation, Marker, MarkerInfo } from 'src/app/model';
 import { MapService } from './services/map.service';
 import { Geolocation } from '@capacitor/geolocation';
 import { first } from 'rxjs';
@@ -43,7 +43,6 @@ export class GoogleMapsComponent implements OnInit {
     rating: '',
     lat: 0,
     lng: 0,
-    distance: '0',
     eta: '0',
     open: undefined,
   };
@@ -51,7 +50,7 @@ export class GoogleMapsComponent implements OnInit {
     lat: 48.86257959027724, 
     lng: 2.31659157820982
   };
-  userLocationInfo: Address = {
+  userLocationInfo: GoogleLocation = {
     street: '',
     city: '',
     country: '',
@@ -107,12 +106,12 @@ export class GoogleMapsComponent implements OnInit {
     const userLat = this.userLocation.lat;
     const userLng = this.userLocation.lng;
     this._mapService
-      .getDistanceBetweenPlaces(userLat, userLng, lat, lng)
+      .getGapBetweenSpots(userLat, userLng, lat, lng)
       .pipe(first())
       .subscribe({
-        next: (distance) => {
-          this.landmarkInfo.distance = distance.kmNumber;
-          this.landmarkInfo.eta = distance.eta;
+        next: (gap) => {
+          // this.landmarkInfo.gap = gap.kmNumber;
+          this.landmarkInfo.eta = gap.eta;
         },
         error: (err) => {
           console.log(err);
@@ -129,18 +128,18 @@ export class GoogleMapsComponent implements OnInit {
       .getLandmarks(this.center.lat, this.center.lng, query)
       .pipe(first())
       .subscribe({
-        next: (pointsOfInterest) => {
-          this.markers = pointsOfInterest.map((pointOfInterest) => {
+        next: (landmarks) => {
+          this.markers = landmarks.map((landmark) => {
             return {
               position: {
-                lat: pointOfInterest.position.lat,
-                lng: pointOfInterest.position.lng,
+                lat: landmark.position.lat,
+                lng: landmark.position.lng,
               },
               label: {
                 color: 'white',
                 text: ' ',
               },
-              title: pointOfInterest.name,
+              title: landmark.name,
               options: {
                 animation: google.maps.Animation.DROP,
               },
@@ -148,8 +147,8 @@ export class GoogleMapsComponent implements OnInit {
                 url: `../../assets/images/${query}.png`,
                 scaledSize: new google.maps.Size(32, 32),
               },
-              rating: pointOfInterest.rating,
-              open_now: pointOfInterest.open_now,
+              rating: landmark.rating,
+              open_now: landmark.open_now,
             };
           });
         },
@@ -189,11 +188,11 @@ export class GoogleMapsComponent implements OnInit {
 
   openUserLocationInfo(marker: any) {
     this._mapService
-      .getAddressByCoordinates(this.center.lat, this.center.lng)
+      .getGoogleLocationByCoordinates(this.center.lat, this.center.lng)
       .pipe(first())
       .subscribe({
-        next: (addressInfo) => {
-          this.userLocationInfo = addressInfo;
+        next: (googleLocationInfo) => {
+          this.userLocationInfo = googleLocationInfo;
           this.infoWindow.get(1)!.open(marker);
         }
       });

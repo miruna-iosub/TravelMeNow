@@ -1,6 +1,7 @@
-﻿using TravelMeNow.Application.Models.Address;
-using TravelMeNow.Application.Models.Place;
-using TravelMeNow.Application.Models.PlacesDistance;
+﻿using TravelMeNow.Application.Exceptions;
+using TravelMeNow.Application.Models.GoogleLocation;
+using TravelMeNow.Application.Models.Spot;
+using TravelMeNow.Application.Models.SpotsGap;
 using TravelMeNow.Application.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,35 +11,36 @@ namespace TravelMeNow.API.Controllers;
 [Route("[controller]")]
 public class MapsController : ControllerBase
 {
-    private readonly IMapService _mapService;
+    private IMapService _mapService;
     public MapsController(IMapService mapService)
     {
         _mapService = mapService;
     }
 
     [HttpGet]
-    [Route("places")]
-    public async Task<IActionResult> GetPlacesAsync([FromQuery] PlaceRequestModel placeRequestModel)
+    [Route("spots")]
+    public async Task<IActionResult> GetSpotsAsync([FromQuery] SpotRequestModel spotRequestModel)
     {
-        var landmark = await _mapService.GetPlacesAsync(placeRequestModel);
+        var landmark = await _mapService.GetSpotsAsync(spotRequestModel);
         return Ok(landmark);
     }
 
 
     [HttpGet]
-    [Route("distance")]
-    public async Task<IActionResult> GetDistanceAsync([FromQuery] DistanceRequestModel distanceRequestModel)
+    [Route("gap")]
+    public async Task<IActionResult> GetGapAsync([FromQuery] GapRequestModel gapRequestModel)
     {
-            var distance = await _mapService.GetDistanceFromUserLocationAsync(distanceRequestModel);
-            return Ok(distance);
+        var gap = await _mapService.GetGapFromUserLocationAsync(gapRequestModel);
+        return Ok(gap);
     }
 
+
     [HttpGet]
-    [Route("address")]
-    public async Task<IActionResult> GetAddressAsync([FromQuery] AddressRequestModel addressRequestModel)
+    [Route("googlelocation")]
+    public async Task<IActionResult> GetGoogleLocationAsync([FromQuery] GoogleLocationRequestModel googleLocationRequestModel)
     {
-            var address = await _mapService.GetAddressByLongitudinalCoordinatesAsync(addressRequestModel);
-            return Ok(address);
+        var googlelocation = await _mapService.GetGoogleLocationByLongitudinalCoordinatesAsync(googleLocationRequestModel);
+        return Ok(googlelocation);
     }
 }
 

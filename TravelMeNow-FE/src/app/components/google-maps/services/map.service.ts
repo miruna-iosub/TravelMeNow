@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
 import { Observable, map } from 'rxjs';
 import {
-  PointOfInterest,
-  PointOfInterestDTO,
-  Distance,
-  DistanceDTO,
-  Address,
-  AddressDTO,
+  Landmark,
+  LandmarkDTO,
+  Gap,
+  GapDTO,
+  GoogleLocation,
+  GoogleLocationDTO,
 } from 'src/app/model';
 import { ApiService } from './api.service';
 @Injectable({
@@ -19,19 +19,19 @@ export class MapService {
     lat: number,
     lng: number,
     query: string
-  ): Observable<PointOfInterest[]> {
+  ): Observable<Landmark[]> {
     return this._apiService.getLandmarks(lat, lng, query).pipe(
-      map<PointOfInterestDTO[], PointOfInterest[]>((pointsOfInterest) => {
-        const result: PointOfInterest[] = pointsOfInterest.map(
-          (pointOfInterest) => {
+      map<LandmarkDTO[], Landmark[]>((landmarks) => {
+        const result: Landmark[] = landmarks.map(
+          (landmark) => {
             return {
               position: {
-                lat: pointOfInterest.geometry.location.lat,
-                lng: pointOfInterest.geometry.location.lng,
+                lat: landmark.geometry.location.lat,
+                lng: landmark.geometry.location.lng,
               },
-              name: pointOfInterest.name,
-              rating: pointOfInterest.rating,
-              open_now: pointOfInterest.opening_hours?.open_Now,
+              name: landmark.name,
+              rating: landmark.rating,
+              open_now: landmark.opening_hours?.open_Now,
             };
           }
         );
@@ -41,27 +41,26 @@ export class MapService {
   }
 
 
-  getDistanceBetweenPlaces(
+  getGapBetweenSpots(
     originLat: number,
     originLong: number,
     destLat: number,
     destLong: number
-  ): Observable<Distance> {
+  ): Observable<Gap> {
     return this._apiService
-      .getDistanceBetweenPlaces(originLat, originLong, destLat, destLong)
+      .getGapBetweenSpots(originLat, originLong, destLat, destLong)
       .pipe(
-        map<DistanceDTO, Distance>((distance) => {
+        map<GapDTO, Gap>((gap) => {
           return {
-            kmNumber: distance.distance.text,
-            eta: distance.duration.text,
+            eta: gap.duration.text,
           };
         })
       );
   }
 
-  getAddressByCoordinates(lat: number, lng: number): Observable<Address> {
-    return this._apiService.getAddressByCoordinates(lat, lng).pipe(map<AddressDTO, Address>((address) => {
-        const data = address.formatted_address.split(',');
+  getGoogleLocationByCoordinates(lat: number, lng: number): Observable<GoogleLocation> {
+    return this._apiService.getGoogleLocationByCoordinates(lat, lng).pipe(map<GoogleLocationDTO, GoogleLocation>((googleLocation) => {
+        const data = googleLocation.formattedGoogleLocation.split(',');
         const street = data[0].split(" ").slice(1).join(" ");
         return {
           street: street == "no name" ? '-' : street,

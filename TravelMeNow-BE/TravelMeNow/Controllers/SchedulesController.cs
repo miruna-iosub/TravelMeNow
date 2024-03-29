@@ -9,7 +9,7 @@ namespace TravelMeNow.API.Controllers;
 [ApiController]
 public class SchedulesController : ControllerBase
 {
-    private readonly IScheduleService _scheduleService;
+    private IScheduleService _scheduleService;
 
     public SchedulesController(IScheduleService scheduleService)
     {

@@ -8,12 +8,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TravelMeNow.Application.Services.Impl;
+namespace TravelMeNow.Application.Services.Implementation;
 
 public class ScheduleService : IScheduleService
 {
-    private readonly IScheduleRepository _scheduleRepository;
-    private readonly IMapper _mapper;
+    private IScheduleRepository _scheduleRepository;
+    private IMapper _mapper;
 
     public ScheduleService(IScheduleRepository scheduleRepository, IMapper mapper)
     {
