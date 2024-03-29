@@ -9,7 +9,7 @@ import { AddressDTO, DistanceDTO, PointOfInterestDTO } from 'src/app/model';
 export class ApiService {
   constructor(private readonly _httpClient: HttpClient) {}
 
-  url: string = 'https://192.168.1.6:5217/maps';
+  url: string = 'https://192.168.1.6:7274/maps';
   // url: string = 'http://localhost:5217/maps';
   // url: string = 'https://travelmenow.online:7274/maps';
   // url: string = 'http://172.20.10.2:5217/maps';

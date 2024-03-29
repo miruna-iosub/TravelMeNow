@@ -18,9 +18,9 @@ public class MapService : IMapService
 
     public async Task<IEnumerable<PlaceResponseModel>> GetPlacesAsync(PlaceRequestModel placeRequestModel)
     {
-        var pois = new List<PlaceResponseModel>();
+        var landmark = new List<PlaceResponseModel>();
 
-        var key = "GoogleMapsKey";
+        var key = "AIzaSyAq1SLR2yidSfrt9TSPNQadb1PuQqh2x_Y";
         Console.WriteLine(key);
         foreach (var keyword in placeRequestModel.Query.Split(','))
         {
@@ -36,17 +36,17 @@ public class MapService : IMapService
 
                 if (placesList != null && placesList.Places != null)
                 {
-                    pois.AddRange(placesList.Places);
+                    landmark.AddRange(placesList.Places);
                 }
             }
         }
 
-        return pois;
+        return landmark;
     }
 
     public async Task<InfoResponseModel> GetDistanceFromUserLocationAsync(DistanceRequestModel distanceRequestModel)
     {
-        var key = "GoogleMapsKey";
+        var key = "AIzaSyAq1SLR2yidSfrt9TSPNQadb1PuQqh2x_Y";
         Console.WriteLine(key);
         var url = $"https://maps.googleapis.com/maps/api/distancematrix/json?origins={distanceRequestModel.OriginLatitude}, {distanceRequestModel.OriginLongitude}&destinations={distanceRequestModel.DestLatitude}, {distanceRequestModel.DestLongitude}&mode=walking&key={key}";
 
@@ -69,7 +69,7 @@ public class MapService : IMapService
 
     public async Task<AddressResponseModel> GetAddressByLongitudinalCoordinatesAsync(AddressRequestModel addressRequestModel)
     {
-        var key = "GoogleMapsKey";
+        var key = "AIzaSyAq1SLR2yidSfrt9TSPNQadb1PuQqh2x_Y";
 
         var url = $"https://maps.googleapis.com/maps/api/geocode/json?latlng={addressRequestModel.Latitude}, {addressRequestModel.Longitude}&key={key}&result_type=route";
 

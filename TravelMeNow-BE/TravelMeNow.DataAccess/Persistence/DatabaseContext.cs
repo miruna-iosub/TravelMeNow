@@ -8,9 +8,9 @@ public class DatabaseContext : DbContext
 {
     public DatabaseContext(DbContextOptions options) : base(options) { }
 
-    public DbSet<PointOfInterest> PointsOfInterest { get; set; }
+    public DbSet<Landmark> Landmarks { get; set; }
 
-    public DbSet<OpeningHour> OpeningHours { get; set; }
+    public DbSet<Schedule> Schedules { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

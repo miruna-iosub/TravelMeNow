@@ -5,7 +5,7 @@ public record Point(double Lat, double Lng);
 
 public record Geometry(Point Location);
 
-public record OpeningHours(bool Open_Now);
+public record Schedules(bool Open_Now);
 
 public record Distance(string text);
 

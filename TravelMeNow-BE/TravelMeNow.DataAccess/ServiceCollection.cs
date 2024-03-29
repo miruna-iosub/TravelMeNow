@@ -16,8 +16,8 @@ public static class ServiceCollection
             options.UseNpgsql(configuration["Database:TravelMeNowString"]);
         });
 
-        services.AddScoped<IPointOfInterestRepository, PointOfInterestRepository>();
-        services.AddScoped<IOpeningHourRepository, OpeningHourRepository>();
+        services.AddScoped<ILandmarkRepository, LandmarkRepository>();
+        services.AddScoped<IScheduleRepository, ScheduleRepository>();
 
         return services;
     }

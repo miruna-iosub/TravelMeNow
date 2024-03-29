@@ -72,6 +72,11 @@ ScaffoldingReadMe.txt
 # StyleCop
 StyleCopReport.xml
 
+/TravelMeNow-BE/TravelMeNow.DataAccess/obj
+/TravelMeNow-BE/.idea
+/TravelMeNow-BE/obj
+/TravelMeNow-BE/TravelMeNow.Application/bin
+
 # Files built by Visual Studio
 *_i.c
 *_p.c
@@ -182,6 +187,7 @@ DocProject/Help/html
 
 # Click-Once directory
 publish/
+web.config
 
 # Publish Web Output
 *.[Pp]ublish.xml

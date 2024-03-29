@@ -13,12 +13,12 @@ public static class ServiceCollection
     {
         services.AddCors(); 
 
-        services.AddAutoMapper(typeof(PointOfInterestProfile));
-        services.AddAutoMapper(typeof(OpeningHourProfile));
+        services.AddAutoMapper(typeof(LandmarkProfile));
+        services.AddAutoMapper(typeof(ScheduleProfile));
 
         services.AddScoped<IMapService, MapService>();
-        services.AddScoped<IPointOfInterestService, PointOfInterestService>();
-        services.AddScoped<IOpeningHourService, OpeningHourService>();
+        services.AddScoped<ILandmarkService, LandmarkService>();
+        services.AddScoped<IScheduleService, ScheduleService>();
 
         return services;
     }

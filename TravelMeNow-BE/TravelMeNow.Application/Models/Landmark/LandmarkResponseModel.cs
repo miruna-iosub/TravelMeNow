@@ -1,6 +1,6 @@
-﻿namespace TravelMeNow.Application.Models.PointOfInterest;
+﻿namespace TravelMeNow.Application.Models.Landmark;
 
-public class PointOfInterestResponseModel
+public class LandmarkResponseModel
 {
     public int Id { get; set; }
     public string Name { get; set; }

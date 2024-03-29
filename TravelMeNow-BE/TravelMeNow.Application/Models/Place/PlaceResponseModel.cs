@@ -21,5 +21,5 @@ public class PlaceResponseModel
     public string? Icon { get; set; }
 
     [JsonProperty("opening_hours")]
-    public OpeningHours? OpeningHours { get; set; }
+    public Schedules? Schedules { get; set; }
 }
