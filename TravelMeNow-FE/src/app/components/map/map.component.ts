@@ -100,7 +100,6 @@ export class MapComponent {
       .pipe(first())
       .subscribe({
         next: (gap) => {
-          // this.landmarkInfo.gap = gap.kmNumber;
           this.landmarkInfo.eta = gap.eta;
         },
         error: (err) => {
