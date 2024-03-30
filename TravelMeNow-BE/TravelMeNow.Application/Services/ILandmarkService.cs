@@ -7,8 +7,8 @@ public interface ILandmarkService
 {
     Task<LandmarkResponseModel> CreateAsync(LandmarkRequestModel landmark);
 
-    Task<Landmark> GetByNameAsync(string name);
-
     Task<IEnumerable<Landmark>> GetAllAsync();
+
+    Task<Landmark> GetByNameAsync(string landmarkName);
 }
 

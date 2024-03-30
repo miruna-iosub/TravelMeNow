@@ -4,5 +4,5 @@ public class LandmarkRequestModel
 {
     public string LandmarkName { get; set; }
 
-    public string Info { get; set; }
+    public string Details { get; set; }
 }

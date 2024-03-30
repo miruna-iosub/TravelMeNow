@@ -11,8 +11,8 @@ import { BookmarksComponent } from './components/bookmarks/bookmarks.component';
 const routes: Routes = [
   {path: 'home', component: StartComponent},
   {path: 'menu', component: MenuComponent},
-  {path: 'map', component: MapComponent},
   {path: 'ar', component: ImageWebcamComponent},
+  {path: 'map', component: MapComponent},
   {path: 'bookmarks', component: BookmarksComponent},
   {path: '', redirectTo: '/home', pathMatch: 'full'}
 ]

@@ -1,5 +1,4 @@
-﻿using TravelMeNow.Application.Exceptions;
-using TravelMeNow.Application.Models.GoogleLocation;
+﻿using TravelMeNow.Application.Models.GoogleLocation;
 using TravelMeNow.Application.Models.Spot;
 using TravelMeNow.Application.Models.SpotsGap;
 using TravelMeNow.Application.Services;
@@ -39,7 +38,7 @@ public class MapsController : ControllerBase
     [Route("googlelocation")]
     public async Task<IActionResult> GetGoogleLocationAsync([FromQuery] GoogleLocationRequestModel googleLocationRequestModel)
     {
-        var googlelocation = await _mapService.GetGoogleLocationByLongitudinalCoordinatesAsync(googleLocationRequestModel);
+        var googlelocation = await _mapService.GetGoogleLocationByLongCoordinatesAsync(googleLocationRequestModel);
         return Ok(googlelocation);
     }
 }

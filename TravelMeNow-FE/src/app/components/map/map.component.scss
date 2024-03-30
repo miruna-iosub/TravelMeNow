@@ -43,3 +43,103 @@
   padding: 0 1rem 0 1rem;
   margin-bottom: 5rem;
 }
+/////////////
+/// @import '_colors';
+
+.show-map-info-window {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  gap: 0.3rem;
+}
+
+.landmark-title {
+  align-self: center;
+  font-weight: bold;
+}
+
+.map {
+  border-radius: 10px;
+}
+
+.app-button {
+  width: 5rem;
+  height: 1.5rem;
+  font-size: 14px;
+  background: rgb(145,183,202);
+  border: 2px solid $secondary-color;
+  color: $secondary-color;
+  border-radius: 10px;
+  text-transform: lowercase;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.app-button:hover {
+  background-color: lighten(rgb(145,183,202), 10%); 
+}
+
+google-map {
+  position: relative;
+}
+
+.current-location {
+  position: absolute;
+  left: 15px;
+  bottom: 30px;
+  padding: 0.5rem;
+  background-color: rgb(255, 255, 255);;
+  border: 1px solid transparent;
+  border-radius: 35px;
+  display: flex;
+  align-items: center;
+  flex-direction: center;
+}
+
+.user-location-icon {
+  width: 0.9rem;
+  fill: rgb(145,183,202);
+}
+
+b {
+  font-weight: bold;
+}
+// /////////////////
+
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.2rem;
+  position: relative;
+}
+
+.camera-icon {
+  color: $highlight-color;
+  font-size: 25px;
+}
+
+.camera-button {
+  background-color: $background-color;
+  border-radius: 40px;
+  border: $highlight-color;
+}
+
+.back-button {
+  background-color: transparent;
+  border: none;
+  font-size: 1.8rem;
+  color: $highlight-color;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 1rem 0 1rem;
+  margin-bottom: 5rem;
+}

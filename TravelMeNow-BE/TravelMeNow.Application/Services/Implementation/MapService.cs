@@ -1,5 +1,4 @@
-﻿using TravelMeNow.Application.Exceptions;
-using TravelMeNow.Application.Models.GoogleLocation;
+﻿using TravelMeNow.Application.Models.GoogleLocation;
 using TravelMeNow.Application.Models.Spot;
 using TravelMeNow.Application.Models.SpotsGap;
 using Newtonsoft.Json;
@@ -69,14 +68,15 @@ public class MapService : IMapService
 
             if (gapsList != null)
             {
-                var info = gapsList.Gaps.First().Infos.First();
-                return info;
+                var details = gapsList.Gaps.First().Details.First();
+                return details;
             }
         }
-        throw new GapException("Some error occured while calling Google Maps Geocoding API");
+        throw new InvalidOperationException("No gaps found.");
+
     }
 
-    public async Task<GoogleLocationResponseModel> GetGoogleLocationByLongitudinalCoordinatesAsync(GoogleLocationRequestModel googleLocationRequestModel)
+    public async Task<GoogleLocationResponseModel> GetGoogleLocationByLongCoordinatesAsync(GoogleLocationRequestModel googleLocationRequestModel)
     {
         var key = "AIzaSyAq1SLR2yidSfrt9TSPNQadb1PuQqh2x_Y";
 
@@ -87,13 +87,14 @@ public class MapService : IMapService
         if (response.IsSuccessStatusCode)
         {
             var jsonString = await response.Content.ReadAsStringAsync();
-            var locations = JsonConvert.DeserializeObject<ApiResultResponseModel>(jsonString);
+            var locations = JsonConvert.DeserializeObject<RestApiResultResponseModel>(jsonString);
             if (locations != null)
             {
                 var location = locations.GoogleLocations.First();
                 return location;
             }
         }
-        throw new GoogleLocationException("Some error occured while calling Google Maps Geocoding API");
+        throw new InvalidOperationException("No locations found.");
+
     }
 }

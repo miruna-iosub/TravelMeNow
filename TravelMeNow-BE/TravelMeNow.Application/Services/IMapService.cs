@@ -10,5 +10,5 @@ public interface IMapService
 
     Task<InfoResponseModel> GetGapFromUserLocationAsync(GapRequestModel gapRequestModel);
 
-    Task<GoogleLocationResponseModel> GetGoogleLocationByLongitudinalCoordinatesAsync(GoogleLocationRequestModel googleLocationRequestModel);
+    Task<GoogleLocationResponseModel> GetGoogleLocationByLongCoordinatesAsync(GoogleLocationRequestModel googleLocationRequestModel);
 }

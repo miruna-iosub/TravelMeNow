@@ -8,7 +8,7 @@ import { StartComponent } from './components/start/start.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { MapComponent } from './components/map/map.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { GoogleMapsComponent } from './components/google-maps/google-maps.component';
+// import { GoogleMapsComponent } from './components/google-maps/google-maps.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -23,7 +23,7 @@ import { BookmarksComponent } from './components/bookmarks/bookmarks.component';
     StartComponent,
     MenuComponent,
     MapComponent,
-    GoogleMapsComponent,
+    // GoogleMapsComponent,
     ImageWebcamComponent,
     BookmarksComponent
   ],

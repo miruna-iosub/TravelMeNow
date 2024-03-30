@@ -16,13 +16,16 @@
 .title-container {
   font-size: 15.5px;
   color: $secondary-color;
+  margin-top: 2rem;
+  margin-bottom: 26rem;
   align-self: center;
+  backdrop-filter: blur(1px); /* You can adjust the pixel value to increase or decrease the amount of blur */
+
 }
 
 .top-container {
   display: flex;
   flex-direction: column;
-  gap: 15rem;
 }
 
 .description {
@@ -38,21 +41,21 @@
   gap: 0.5rem;
 }
 .app-button {
-  width: 11.5rem;
+  width: 12rem;
   height: 2.5rem;
-  background-color: $start-button-color;
-  border: 1px solid $border-start-button-color;
+  background-color: rgba(255, 255, 255, 0.8);
+  font-weight: bold 2px;
+  border: 0px solid transparent;
+  color: black;
   border-radius: 30px;
   font-size: 16px;
-  color: $secondary-color;
-  margin-top: 14rem;
+  margin-bottom: 1rem;
   margin-left: auto; 
   margin-right: auto;
 }
 
 .custom-start-button {
   font-size: 16px;
-  margin-top: 14rem;
   margin-left: auto; 
   margin-right: auto;
   color: $secondary-color;
@@ -77,26 +80,27 @@
 .language-buttons > button {
   color: $secondary-color;
   background-color: $highlight-color;
-  border: 1px solid $secondary-color;
+  border: 0px solid transparent;
+  border-radius: 60%;
   object-fit: cover;
-  width: 1.6rem;
-  height: 1.2rem;
+  width: 2rem;
+  height: 1.8rem;
   background-size: cover;
   background-position: center;
 }
 
 #fr {
-  background-image: url("../../../assets/images/fr.png");
+  background-image: url("../../../assets/images/french.png");
 }
 
 #ro {
-  background-image: url("../../../assets/images/ro.png");
+  background-image: url("../../../assets/images/romanian.png");
 }
 
 #en {
-  background-image: url('../../../assets/images/en.png');
+  background-image: url('../../../assets/images/english.png');
 }
 
 #es {
-  background-image: url('../../../assets/images/es.png');
+  background-image: url('../../../assets/images/spanish.png');
 }

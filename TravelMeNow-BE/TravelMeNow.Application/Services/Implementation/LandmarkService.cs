@@ -8,20 +8,20 @@ namespace TravelMeNow.Application.Services.Implementation;
 public class LandmarkService : ILandmarkService
 {
     private  ILandmarkRepository _landmarkRepository;
-    private IMapper _mapper;
+    private IMapper _Imapper;
 
-    public LandmarkService(ILandmarkRepository landmarkRepository, IMapper mapper)
+    public LandmarkService(ILandmarkRepository landmarkRepository, IMapper _Imapper)
     {
         _landmarkRepository = landmarkRepository;
-        _mapper = mapper;
+        _Imapper = _Imapper;
     }
 
     public async Task<LandmarkResponseModel> CreateAsync(LandmarkRequestModel landmarkRequestModel)
     {
-        var landmark = _mapper.Map<Landmark>(landmarkRequestModel);
+        var landmark = _Imapper.Map<Landmark>(landmarkRequestModel);
         var addedLandmark = await _landmarkRepository.CreateAsync(landmark);
 
-        return _mapper.Map<LandmarkResponseModel>(addedLandmark);
+        return _Imapper.Map<LandmarkResponseModel>(addedLandmark);
     }
 
     public async Task<IEnumerable<Landmark>> GetAllAsync()
@@ -31,9 +31,9 @@ public class LandmarkService : ILandmarkService
         return landmark;
     }
 
-    public async Task<Landmark> GetByNameAsync(string name)
+    public async Task<Landmark> GetByNameAsync(string landmarkName)
     {
-        var landmark = await _landmarkRepository.GetByNameAsync(name);
+        var landmark = await _landmarkRepository.GetByNameAsync(landmarkName);
         return landmark;
     }
 }

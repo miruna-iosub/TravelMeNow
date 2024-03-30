@@ -23,9 +23,9 @@ public class LandmarksController : ControllerBase
     }
 
     [HttpGet("{name}")]
-    public async Task<IActionResult> GetByNameAsync(string name)
+    public async Task<IActionResult> GetByNameAsync(string landmarkName)
     {
-            var result = await _landmarkService.GetByNameAsync(name);
+            var result = await _landmarkService.GetByNameAsync(landmarkName);
             return Ok(result);
 
     }

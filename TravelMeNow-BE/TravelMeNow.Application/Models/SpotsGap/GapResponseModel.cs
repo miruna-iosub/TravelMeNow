@@ -6,5 +6,5 @@ namespace TravelMeNow.Application.Models.SpotsGap;
 public class GapResponseModel
 {
     [JsonProperty("elements")]
-    public IEnumerable<InfoResponseModel>? Infos { get; set; }
+    public IEnumerable<InfoResponseModel>? Details { get; set; }
 }

@@ -3,7 +3,7 @@
 namespace TravelMeNow.Application.Models.GoogleLocation;
 
 [Serializable]
-public class ApiResultResponseModel
+public class RestApiResultResponseModel
 {
     [JsonProperty("results")]
     public IEnumerable<GoogleLocationResponseModel>? GoogleLocations { get; set; }
