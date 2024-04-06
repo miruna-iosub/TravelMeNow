@@ -37,9 +37,9 @@ TravelMeNow utilizes cutting-edge technologies to deliver a seamless AR experien
 ## 📱 User-Friendly Interface
 Visit  [travelmenow.online](https://travelmenow.online/) for an exciting journey!
 
-<img src="https://github.com/miruna-iosub/TravelMeNow/assets/100404656/ea040984-054b-4981-b0f4-5195a706805f" height="400" alt="homepage">
-<img src="https://github.com/miruna-iosub/TravelMeNow/assets/100404656/e567ff29-01e7-4865-a1e6-091f49efe629" height="400" alt="menu">
-<img src="https://github.com/miruna-iosub/TravelMeNow/assets/100404656/29a439d7-e967-48cf-a581-0c6bf127461c" height="400" alt="ar">
+<img src="https://github.com/miruna-iosub/TravelMeNow/assets/100404656/3f213494-9bdb-4fe9-8578-da52d3b5fc43" height="400" alt="homepage">
+<img src="https://github.com/miruna-iosub/TravelMeNow/assets/100404656/9192be24-79c3-41f8-b9a8-1cdb58c582c7" height="400" alt="menu">
+<img src="https://github.com/miruna-iosub/TravelMeNow/assets/100404656/0f66debc-ed69-4651-bbd4-1bfe24e0513b" height="400" alt="ar">
 
 
 
