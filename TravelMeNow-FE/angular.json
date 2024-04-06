@@ -4,7 +4,7 @@
   "newProjectRoot": "projects",
   "schematics": {
     "@schematics/angular:component": {
-      "style": "scss"
+      "style": "css"
     }
   },
   "projects": {
@@ -31,8 +31,7 @@
               "src/assets"
             ],
             "styles": [
-              "@angular/material/prebuilt-themes/deeppurple-amber.css",
-              "src/styles.scss"
+              "src/styles.css"
             ],
             "stylePreprocessorOptions": {
               "includePaths": [
@@ -104,8 +103,7 @@
               "src/assets"
             ],
             "styles": [
-              "@angular/material/prebuilt-themes/deeppurple-amber.css",
-              "src/styles.scss"
+              "src/styles.css"
             ],
             "scripts": []
           }

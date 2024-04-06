@@ -10,7 +10,7 @@ interface BuildingInfo {
 
 @Component({
   templateUrl: './bookmarks.component.html',
-  styleUrls: ['./bookmarks.component.scss'],
+  styleUrls: ['./bookmarks.component.css'],
 
 })
 

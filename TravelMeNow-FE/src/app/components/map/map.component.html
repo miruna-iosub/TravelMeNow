@@ -1,4 +1,12 @@
-<google-map [center]="center" [options]="options" width="400px" height="600px" style="border-radius: 10px;">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+
+<google-map 
+  [center]="center" 
+  [options]="options" 
+  width="400px" 
+  height="600px" 
+  style="border-radius: 10px;"
+>
   <map-marker
     #info_poi_marker="mapMarker"
     *ngFor="let marker of markers"
@@ -8,63 +16,42 @@
     [visible]="true"
     [options]="marker.options"
     [icon]="marker.icon"
-    (mapClick)="
-      openlandmarkInfo(
-        info_poi_marker,
-        marker.title,
-        marker.rating,
-        marker.position.lat,
-        marker.position.lng,
-        marker.open_now
-      )
-    "
+    (mapClick)="openlandmarkInfo(
+      info_poi_marker,
+      marker.title,
+      marker.rating,
+      marker.position.lat,
+      marker.position.lng,
+      marker.open_now
+    )"
   ></map-marker>
+
   <map-info-window class="show-map-info-window">
-    <div class="landmark-title">
-      {{ landmarkInfo.name }}
-    </div>
-    <div *ngIf="landmarkInfo.open">
-      {{ "Open" | translate }}: <b>{{ landmarkInfo.open }}</b>
-    </div>
-    <div *ngIf="landmarkInfo.rating != 0">
-      {{ "Rating" | translate }}: <b>{{ landmarkInfo.rating }}</b>
-    </div>
-    <div>
-      ETA: <b>{{ landmarkInfo.eta }} </b>
-    </div>
-    <button class="app-button" (click)="openGoogleMaps()">
-      {{ "Visit" | translate }}
-    </button>
+    <div class="landmark-title">{{ landmarkInfo.name }}</div>
+    <div *ngIf="landmarkInfo.open">{{ "Open" | translate }}: <b>{{ landmarkInfo.open }}</b></div>
+    <div *ngIf="landmarkInfo.rating !== ''">{{ "Rating" | translate }}: <b>{{ landmarkInfo.rating }}</b></div>
+    <div>ETA: <b>{{ landmarkInfo.eta }}</b></div>
+    <button class="app-button" (click)="openGoogleMaps()">{{ "Visit" | translate }}</button>
   </map-info-window>
 
-  <map-marker
-    #user_location_marker="mapMarker"
-    [position]="userLocation"
-    (mapClick)="openUserLocationInfo(user_location_marker)"
-  >
-  </map-marker>
+  <map-marker #user_location_marker="mapMarker" [position]="userLocation" (mapClick)="openUserLocationInfo(user_location_marker)"></map-marker>
+
   <map-info-window class="show-map-info-window">
-    <div>
-      {{ "Street" | translate }}: <b> {{ userLocationInfo.street }} </b>
-    </div>
-    <div>
-      {{ "City" | translate }}: <b> {{ userLocationInfo.city }} </b>
-    </div>
-    <div>
-      {{ "Country" | translate }}: <b> {{ userLocationInfo.country }} </b>
-    </div>
+    <div>{{ "Street" | translate }}: <b>{{ userLocationInfo.street }}</b></div>
+    <div>{{ "City" | translate }}: <b>{{ userLocationInfo.city }}</b></div>
+    <div>{{ "Country" | translate }}: <b>{{ userLocationInfo.country }}</b></div>
   </map-info-window>
+
   <button class="current-location" (click)="setCenterBackToUserLocation()">
     <ion-icon class="user-location-icon" name="location"></ion-icon>
   </button>
 </google-map>
 
 <div class="bottom">
-    <button (click)="goBack()" class="back-button">
-      <ion-icon name="arrow-back-outline"></ion-icon>
-    </button>
-    <button class="camera-button" routerLink="/ar">
-      <ion-icon class="camera-icon" name="camera"></ion-icon>
-    </button>
-  </div>
- 
+  <button (click)="goBack()" class="back-button">
+    <ion-icon name="arrow-back-outline"></ion-icon>
+  </button>
+  <button class="camera-button" routerLink="/ar">
+    <ion-icon class="camera-icon" name="camera"></ion-icon>
+  </button>
+</div>

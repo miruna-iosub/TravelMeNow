@@ -15,15 +15,13 @@ interface BuildingInfo {
 @Component({
   selector: 'app-image-webcam',
   templateUrl: './ar.component.html',
-  styleUrls: ['./ar.component.scss'],
+  styleUrls: ['./ar.component.css'],
 
 })
 
 @Injectable({
   providedIn: 'root',
 })
-
-
 
 export class ImageWebcamComponent {
   constructor(
@@ -133,5 +131,4 @@ export class ImageWebcamComponent {
     localStorage.removeItem('bookmarks');
     this.bookmarks = [];
   }
-
 }

@@ -1,10 +1,9 @@
-@import "colors";
 :host {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  background-color: $background-color;
+  background-color: rgb(145,183,202);
   min-height: 100vh;
 }
 
@@ -18,21 +17,21 @@
 }
 
 .camera-icon {
-  color: $highlight-color;
+  color: rgba(243, 232, 233, 0.8);
   font-size: 25px;
 }
 
 .camera-button {
-  background-color: $background-color;
+  background-color: rgb(145,183,202);
   border-radius: 40px;
-  border: $highlight-color;
+  border: rgba(243, 232, 233, 0.8);
 }
 
 .back-button {
   background-color: transparent;
   border: none;
   font-size: 1.8rem;
-  color: $highlight-color;
+  color: rgba(243, 232, 233, 0.8);
 }
 
 .bottom {
@@ -67,8 +66,8 @@
   height: 1.5rem;
   font-size: 14px;
   background: rgb(145,183,202);
-  border: 2px solid $secondary-color;
-  color: $secondary-color;
+  border: 2px solid rgb(255,255,254);
+  color: rgb(255,255,254);
   border-radius: 10px;
   text-transform: lowercase;
   transition: background-color 0.3s ease-in-out;
@@ -114,21 +113,21 @@ b {
 }
 
 .camera-icon {
-  color: $highlight-color;
+  color: rgba(243, 232, 233, 0.8);
   font-size: 25px;
 }
 
 .camera-button {
-  background-color: $background-color;
+  background-color: rgb(145,183,202);
   border-radius: 40px;
-  border: $highlight-color;
+  border: rgba(243, 232, 233, 0.8);
 }
 
 .back-button {
   background-color: transparent;
   border: none;
   font-size: 1.8rem;
-  color: $highlight-color;
+  color: rgba(243, 232, 233, 0.8);
 }
 
 .bottom {
@@ -137,5 +136,6 @@ b {
   align-items: center;
   width: 100%;
   padding: 0 1rem 0 1rem;
+  margin-top: 1rem;
   margin-bottom: 5rem;
 }

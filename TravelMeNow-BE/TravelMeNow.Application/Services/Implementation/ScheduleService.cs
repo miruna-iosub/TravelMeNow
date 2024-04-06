@@ -2,11 +2,6 @@
 using TravelMeNow.Application.Models.Schedule;
 using TravelMeNow.DataAccess.Entities;
 using TravelMeNow.DataAccess.Repositories;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TravelMeNow.Application.Services.Implementation;
 

@@ -5,7 +5,7 @@ import { Preferences } from '@capacitor/preferences';
 @Component({
   selector: 'app-start',
   templateUrl: './start.component.html',
-  styleUrls: ['./start.component.scss'],
+  styleUrls: ['./start.component.css'],
 })
 export class StartComponent implements OnInit {
   frFlag!: boolean;

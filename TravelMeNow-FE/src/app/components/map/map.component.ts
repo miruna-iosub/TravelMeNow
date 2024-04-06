@@ -2,11 +2,24 @@ import { Component } from '@angular/core';
 import { Location } from '@angular/common';
 import { AppLauncher } from '@capacitor/app-launcher';
 import { Camera, CameraResultType } from '@capacitor/camera';
+import {
+  OnInit,
+  QueryList,
+  ViewChild,
+  ViewChildren,
+} from '@angular/core';
+import { GoogleMap, MapInfoWindow } from '@angular/google-maps';
+import { ActivatedRoute } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
+import { GoogleLocation, Marker, MarkerInfo } from 'src/app/model';
+import { MapService } from './services/map.service';
+import { Geolocation } from '@capacitor/geolocation';
+import { first } from 'rxjs';
 
 @Component({
   selector: 'app-map',
   templateUrl: './map.component.html',
-  styleUrls: ['./map.component.scss'],
+  styleUrls: ['./map.component.css'],
 })
 export class MapComponent {
   @ViewChild(GoogleMap) map!: GoogleMap;
@@ -188,10 +201,20 @@ export class MapComponent {
   }
 
   openGoogleMaps() {
-    openGoogleMaps(this.landmarkInfo.lat, this.landmarkInfo.lng);
+    const latLng = `${this.landmarkInfo.lat},${this.landmarkInfo.lng}`;
+    let url: string;
+  
+    if (/(android)/i.test(navigator.userAgent)) {
+      url = `geo:${latLng}?z=${21}`;
+    } else if (/(ipod|iphone|ipad)/i.test(navigator.userAgent)) {
+      url = `maps://maps.apple.com/?ll=${latLng}&z=${21}`;
+    } else {
+      url = `https://www.google.com/maps/@${latLng},${21}z`;
+    }
+  
+    window.open(url, '_system');
   }
   
-    
   
   goBack() {
     this.location.back();
@@ -212,20 +235,4 @@ export class MapComponent {
   }
 }
 
-/////////////////
-
-import {
-  OnInit,
-  QueryList,
-  ViewChild,
-  ViewChildren,
-} from '@angular/core';
-import { GoogleMap, MapInfoWindow } from '@angular/google-maps';
-import { ActivatedRoute } from '@angular/router';
-import { openGoogleMaps } from './utils';
-import { TranslateService } from '@ngx-translate/core';
-import { GoogleLocation, Marker, MarkerInfo } from 'src/app/model';
-import { MapService } from './services/map.service';
-import { Geolocation } from '@capacitor/geolocation';
-import { first } from 'rxjs';
 

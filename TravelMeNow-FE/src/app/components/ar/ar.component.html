@@ -1,3 +1,5 @@
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+
 <div class="webcam-container">
   <webcam [height]="560" [width]="400" [trigger]="triggerObservable" (imageCapture)="recognizeImg($event)"></webcam>
 
@@ -21,7 +23,6 @@
     <ion-icon [name]="isBookmarked ? 'bookmarks' : 'bookmarks-outline'"></ion-icon>
   </button>
 
-  <!-- Overlay Information on Webcam Feed -->
   <div *ngIf="buildingInfo" class="info-overlay">
     <h2>{{ buildingInfo.name }}</h2>
     <p *ngFor="let detail of buildingInfo.details">{{ detail }}</p>

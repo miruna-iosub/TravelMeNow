@@ -1,3 +1,34 @@
+
+export interface Marker {
+  position: {
+    lat: number;
+    lng: number;
+  };
+  label: {
+    color: string;
+    text: string;
+  };
+  title: string;
+  options: {
+    animation: google.maps.Animation;
+  };
+  icon: {
+    url: string;
+    scaledSize: google.maps.Size;
+  };
+  rating: number;
+  open_now: boolean;
+}
+
+export interface MarkerInfo {
+  name: string;
+  rating: string | number;
+  lat: number;
+  lng: number;
+  open: string | undefined;
+  eta: string;
+}
+
 export interface Landmark {
   position: {
     lat: number;
@@ -45,34 +76,4 @@ export interface GoogleLocation {
   street: string;
   city: string;
   country: string;
-}
-
-export interface Marker {
-  position: {
-    lat: number;
-    lng: number;
-  };
-  label: {
-    color: string;
-    text: string;
-  };
-  title: string;
-  options: {
-    animation: google.maps.Animation;
-  };
-  icon: {
-    url: string;
-    scaledSize: google.maps.Size;
-  };
-  rating: number;
-  open_now: boolean;
-}
-
-export interface MarkerInfo {
-  name: string;
-  rating: string | number;
-  lat: number;
-  lng: number;
-  open: string | undefined;
-  eta: string;
 }
