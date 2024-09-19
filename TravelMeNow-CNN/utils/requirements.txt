@@ -1,0 +1,10 @@
+base64
+db
+fastapi
+fastapi.middleware.cors
+io
+keras.utils
+numpy
+pydantic
+tensorflow
+uvicorn
